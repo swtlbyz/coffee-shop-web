@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: web-deploy
+  name: web-deploy
+  namespace: app1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: web-deploy
+    spec:
+      containers:
+      - image: whoitsbayz/coffee-shop-web:v1.0
+        name: coffee-shop-web
+        resources: {}
+status: {}
