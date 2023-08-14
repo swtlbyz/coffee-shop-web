@@ -7,7 +7,7 @@ metadata:
   name: web-deploy
   namespace: app1
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: web-deploy
@@ -19,7 +19,7 @@ spec:
         app: web-deploy
     spec:
       containers:
-      - image: whoitsbayz/coffee-shop-web:v1.0
+      - image: whoitsbayz/coffee-shop-web:v2.0
         name: coffee-shop-web
         resources: {}
 status: {}
